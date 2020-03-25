@@ -1,0 +1,21 @@
+<%- include('header'); %>
+
+<h1>Hallo</h1>
+
+<div id="mapid"></div>
+
+<% for(let i=0; i<markers.length; i++) { %>
+  <p class="<%=markers[i].classes%>"><%=markers[i].coords%></p>
+<% } %>
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+ integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+ crossorigin=""></script>
+<script src="/js/script.js"></script>
+<script>
+  <% for(let i=0; i<markers.length; i++) { %>
+  L.marker([<%=markers[i].coords%>]).bindPopup("<%-markers[i].text%>").addTo(mymap);
+  <% } %>
+</script>
+
+<%- include('footer'); %>

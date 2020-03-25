@@ -1,0 +1,11 @@
+{
+  "locations": [{
+    "coords": [51.509, -0.08],
+    "text": "Hallo, dit is <strong>tekst</strong>",
+    "classes": "red"
+    },{
+    "coords": [51.503, -0.06],
+    "text": "Hallo, dit is ook een <strong>tekst</strong> vanuit JSON",
+    "classes": "green"
+    }]
+}
